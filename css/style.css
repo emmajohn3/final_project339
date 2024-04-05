@@ -1,0 +1,167 @@
+
+/* start interactive hover */
+.travelers_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+.travelers_image {
+    position: relative;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.travelers_image img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+.overlay-content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.travelers_image:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+/* end interactive hover */
+
+/* start styling from online example */
+:root {
+    --orange70: hsla(19, 76%, 57%, 0.922);
+    --orange91: hsl(34, 100%, 55%);
+    --orange95: hsl(23, 100%, 87%);
+    --bluegray40: hsl(217, 21%, 40%);
+    --darkblue: hsl(217, 97%, 23%);
+}
+html {
+    height: 100%;
+    font-size: 100%;
+    line-height: 1.35;
+    font-weight: normal;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+      Noto Sans, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(335, 20%, 99%);
+}
+h1 {
+    margin: 0.2em 0 0.2em;
+    font-size: 1000%;
+    line-height: 0.8;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    color: var(--bluegray40);
+}
+h2 {
+    padding-top: 0.2em;
+    font-size: 300%;
+    margin-bottom: 0.05em;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--orange95);
+    color: var(--darkblue)
+}
+.travelers{
+    background-image: url("images/airplane_background.jpg");
+}
+h3 {
+    font-size: 200%;
+    margin-bottom: 0.25em;
+    line-height: 1.36;
+    font-weight: 500;
+    text-align: center;
+    background-color: var(--orange95);
+    color: var(--darkblue);
+}
+a, a:visited {
+    color: var(--darkblue);
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    font-size: 120%;
+}
+a:focus {
+    outline: 2px solid var(--bluegray40);
+}
+header, nav, main{
+    padding: 0 6vw;
+ }
+.skip{
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    left: -1000px;
+    position: absolute;
+}
+.skip:focus {
+    background-color: var(--orange95);
+    left: 10px;
+}
+header {
+    background-color: var(--orange91);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+nav {
+    background-color: var(--orange95);
+    margin-bottom: 1rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1em 0;
+    justify-content: center;
+}
+nav li {
+    margin-right: 1em;
+    font-size: 150%;
+    font-weight: 600;
+}
+p{
+    font-size: 120%;
+}
+/* start image effect */
+img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    transform: rotate(-2deg); 
+    border: 10px solid #fff;
+}
+.overlay{
+    transform: rotate(-2deg); 
+}
+
+
+ 
+  
+ 
+  
+  
+ 
+
+  
+  
+  
+
+  
+
+  
