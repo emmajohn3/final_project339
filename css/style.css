@@ -41,11 +41,11 @@
 
 /* start styling from online example */
 :root {
-    --orange70: hsla(19, 76%, 57%, 0.922);
-    --orange91: hsl(34, 100%, 55%);
-    --orange95: hsl(23, 100%, 87%);
     --bluegray40: hsl(217, 21%, 40%);
     --darkblue: hsl(217, 97%, 23%);
+    --darkpink: hsl(335, 50%, 70%);
+    --midpink: hsl(335, 50%, 91%);
+    --lightpink: hsl(335, 50%, 95%);
 }
 html {
     height: 100%;
@@ -71,34 +71,30 @@ h1 {
 }
 h2 {
     padding-top: 0.2em;
-    font-size: 300%;
+    font-size: 400%;
     margin-bottom: 0.05em;
     font-weight: 600;
     text-align: center;
-    background-color: var(--orange95);
+    background-color: var(--lightpink);
     color: var(--darkblue)
 }
 .travelers{
-    background-image: url("images/airplane_background.jpg");
+    background-image: url("../images/airplane_background.jpg");
+    background-size: 70%;
 }
 h3 {
-    font-size: 200%;
+    font-size: 300%;
     margin-bottom: 0.25em;
     line-height: 1.36;
     font-weight: 500;
     text-align: center;
-    background-color: var(--orange95);
     color: var(--darkblue);
 }
 a, a:visited {
     color: var(--darkblue);
 }
-a:hover, a:focus {
-    text-decoration: underline;
-    font-size: 120%;
-}
 a:focus {
-    outline: 2px solid var(--bluegray40);
+    font-size: 120%;
 }
 header, nav, main{
     padding: 0 6vw;
@@ -110,33 +106,42 @@ header, nav, main{
     position: absolute;
 }
 .skip:focus {
-    background-color: var(--orange95);
+    background-color: var(--lightpink);
     left: 10px;
 }
 header {
-    background-color: var(--orange91);
+    background-color: var(--midpink);
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
 nav {
-    background-color: var(--orange95);
+    background-color: var(--lightpink);
     margin-bottom: 1rem;
 }
 nav ul {
     display: flex;
     list-style: none;
     padding: 1em 0;
-    justify-content: center;
+    justify-content: center;        
 }
 nav li {
     margin-right: 1em;
     font-size: 150%;
     font-weight: 600;
+    border: 4px solid var(--darkblue);
+    border-radius: 6px;
+    padding: 1%;
+    transition: all 0.3s ease 0s;    
+}
+nav li:hover{
+    border-radius: 50px;
+    transition: all 0.3s ease 0s; 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
 }
 p{
     font-size: 120%;
 }
-/* start image effect */
+/* start tilted image effect */
 img{
     margin-left: auto;
     margin-right: auto;
@@ -146,22 +151,163 @@ img{
     transform: rotate(-2deg); 
     border: 10px solid #fff;
 }
+/* end tilted image effect */
 .overlay{
     transform: rotate(-2deg); 
 }
-
-
- 
-  
- 
-  
-  
- 
-
-  
-  
-  
-
-  
-
-  
+.masked_austria{
+    color: transparent;
+    background-image: url("../images/hallstatt_clock.jpg");
+    background-clip: text;
+    text-align: center;
+    background-size: 80%;
+    position: relative;
+    background-position: center;
+}
+.masked_hungary{
+    color: transparent;
+    background-image: url("../images/boat_tour.jpg");
+    background-size: 85%;
+    background-clip: text;
+    text-align: center;
+    background-position: center;
+}
+.masked_germany{
+    color: transparent;
+    background-image: url("../images/glockenspiel.jpg");
+    background-size: cover;
+    background-clip: text;
+    text-align: center;
+    background-position: 20%;
+}
+    /* box-shadow: 5px 5px 0 var(--orange95), 10px 10px 0 var(--orange91), -1px -1px 0 black; */
+.city_container{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    border: var(--bluegray40) solid 5px;
+    background-color: var(--lightpink);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    justify-content: center;
+    column-gap: 1%;
+    /* transform: rotate(2deg);  */
+    width: 40%;
+    font-size: 120%;
+    margin-bottom: 2%;
+}
+.plane{
+    border: none;
+    box-shadow: none;
+    display: inline;
+    width: 20%;
+    margin: 0;
+}
+.plane_jack_auntlisa{
+    width: 100%;
+    display: inline;
+    margin: 2%;
+}
+.day{
+    text-align: center;
+    background-color: none;
+}
+.img_p_container{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    margin: 2%;
+}
+.img_p_container img{
+    width: 40%;
+}
+.day1_container img:nth-child(2){
+    transform: rotate(4deg);  
+}
+#budapest_meal{
+    width: 30%;
+}
+video{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    transform: rotate(2deg); 
+    border: 10px solid #fff;
+}
+.slideshow_container{
+    position: relative;
+    width: 130%;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.myslides{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: 200%;
+}
+.slideInLeft {
+    animation: slideInLeft 1s forwards;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+}
+.slideOutRight {
+    animation: slideOutRight 1s forwards;
+}
+@keyframes slideOutRight {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+}  
+button{
+    background-color: var(--midpink);
+    color: var(--darkblue);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 1s;
+    font-size: 130%;
+}
+button:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 5px solid var(--bluegray40);
+    border-right: 5px solid var(--bluegray40);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+img.castlehill, img.bud{ 
+    width: 30%;
+}
+.day2_container img:nth-child(2){
+    transform: rotate(4deg);  
+}
+/* having weird overlap issues with this one container */
+#slideshow{
+    display: flex;
+    margin-bottom: 25%;
+    align-items: center;
+}
+.car{
+    width: 30%;
+    border: none;
+    box-shadow: none;
+    margin: 2%;
+}
