@@ -30,9 +30,13 @@
     position: absolute;
     bottom: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+    transform: translateX(-50%);
     color: white;
     text-align: center;
+}
+.overlay-content p{
+    font-size: 50%;
 }
 .travelers_image:hover .overlay {
     opacity: 1; /* Show overlay on hover */
@@ -62,7 +66,7 @@ body {
 }
 h1 {
     margin: 0.2em 0 0.2em;
-    font-size: 1000%;
+    font-size: 400%;
     line-height: 0.8;
     font-weight: 900;
     text-transform: uppercase;
@@ -71,7 +75,7 @@ h1 {
 }
 h2 {
     padding-top: 0.2em;
-    font-size: 400%;
+    font-size: 300%;
     margin-bottom: 0.05em;
     font-weight: 600;
     text-align: center;
@@ -82,8 +86,12 @@ h2 {
     background-image: url("../images/airplane_background.jpg");
     background-size: 70%;
 }
+.favorites_container{
+    background-image: url("../images/airplane_background.jpg");
+    background-size: 70%;
+}
 h3 {
-    font-size: 300%;
+    font-size: 100%;
     margin-bottom: 0.25em;
     line-height: 1.36;
     font-weight: 500;
@@ -126,9 +134,9 @@ nav ul {
 }
 nav li {
     margin-right: 1em;
-    font-size: 150%;
+    font-size: 100%;
     font-weight: 600;
-    border: 4px solid var(--darkblue);
+    border: 0.2em solid var(--darkblue);
     border-radius: 6px;
     padding: 1%;
     transition: all 0.3s ease 0s;    
@@ -147,9 +155,9 @@ img{
     margin-right: auto;
     margin-top: 20px;
     position: relative;
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.7);
     transform: rotate(-2deg); 
-    border: 10px solid #fff;
+    border: 0.7em solid #fff;
 }
 /* end tilted image effect */
 .overlay{
@@ -186,13 +194,14 @@ img{
     width: fit-content;
     align-items: center;
     border: var(--bluegray40) solid 5px;
-    background-color: var(--lightpink);
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.5);
     justify-content: center;
     column-gap: 1%;
     /* transform: rotate(2deg);  */
     width: 40%;
-    font-size: 120%;
+    font-size: 60%;
     margin-bottom: 2%;
 }
 .plane{
@@ -202,8 +211,8 @@ img{
     width: 20%;
     margin: 0;
 }
-.plane_jack_auntlisa{
-    width: 100%;
+img.plane_jack_auntlisa{
+    width: 40%;
     display: inline;
     margin: 2%;
 }
@@ -213,6 +222,7 @@ img{
 }
 .img_p_container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1%;
     margin: 2%;
@@ -220,11 +230,23 @@ img{
 .img_p_container img{
     width: 40%;
 }
-.day1_container img:nth-child(2){
+.day1_container img:nth-child(2),
+.day2_container img:nth-child(2),
+.day3_container img:nth-child(2),
+.day3_container2 img:nth-child(2),
+.day4_container img:nth-child(2),
+.day5_container img:nth-child(2),
+.day6_container img:nth-child(2),
+.day7_container img:nth-child(2),
+.day8_container img:nth-child(2),
+.day9_container img:nth-child(2){
     transform: rotate(4deg);  
 }
+img.budapest_meal{
+    width: 35%;
+}
 #budapest_meal{
-    width: 30%;
+    width: 20%
 }
 video{
     width: 25%;
@@ -232,10 +254,12 @@ video{
     margin-right: auto;
     margin-top: 20px;
     position: relative;
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,.7);
     transform: rotate(2deg); 
-    border: 10px solid #fff;
+    border: 0.6em solid #fff;
 }
+
+/* start first slideshow container */
 .slideshow_container{
     position: relative;
     width: 130%;
@@ -275,7 +299,8 @@ video{
     100% {
       transform: rotateY(90deg);
     }
-}  
+} 
+/* end first slideshow container */
 button{
     background-color: var(--midpink);
     color: var(--darkblue);
@@ -284,20 +309,24 @@ button{
     transition: all 1s;
     font-size: 130%;
 }
-button:hover {
+button:hover{
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-bottom: 5px solid var(--bluegray40);
-    border-right: 5px solid var(--bluegray40);
+    border-bottom: 5px solid var(--darkblue);
+    border-right: 5px solid var(--darkblue);
     box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-img.castlehill, img.bud{ 
-    width: 30%;
+button:focus{
+    font-size: 150%;
+    border: 0.2em solid var(--darkblue);
 }
 .day2_container img:nth-child(2){
     transform: rotate(4deg);  
+}
+img.gyor{
+    width: 25%;
 }
 /* having weird overlap issues with this one container */
 #slideshow{
@@ -310,4 +339,338 @@ img.castlehill, img.bud{
     border: none;
     box-shadow: none;
     margin: 2%;
+}
+/* start second slideshow container */
+.slideshow_container2{
+    position: relative;
+    width: 130%;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.myslides2{
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: 250%;
+}
+.slideInLeft {
+    animation: slideInLeft 1s forwards;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+}
+.slideOutRight {
+    animation: slideOutRight 1s forwards;
+}
+@keyframes slideOutRight {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+} 
+/* end second slideshow container */
+img.hotel, 
+img.palace, 
+img.durnstein, 
+img.gilgen, 
+img.cemetery,
+img.fort,
+img.mirabell,
+img.hallstatt,
+img.munich,
+img.dachau,
+img.munich2,
+img.castlehill,
+img.bud{
+    width: 25%;
+}
+img.hallstatt{
+    width: 20%;
+}
+video.hallstatt{
+    width: 50%;
+}
+
+/* start third slideshow container */
+.slideshow_container3{
+    position: relative;
+    width: 130%;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.myslides3{
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: 250%;
+}
+.slideInLeft {
+    animation: slideInLeft 1s forwards;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+}
+.slideOutRight {
+    animation: slideOutRight 1s forwards;
+}
+@keyframes slideOutRight {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+} 
+/* end third slideshow container */
+
+img.gilgen{
+    width: 25%;
+}
+
+img:hover{
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 1);
+    transform: rotate(2deg);
+    transition: 0.5s ease;
+}
+.day1_container img:nth-child(2):hover,
+.day2_container img:nth-child(2):hover,
+.day3_container img:nth-child(2):hover,
+.day3_container2 img:nth-child(2):hover,
+.day4_container img:nth-child(2):hover,
+.day5_container img:nth-child(2):hover,
+.day6_container img:nth-child(2):hover,
+.day7_container img:nth-child(2):hover,
+.day8_container img:nth-child(2):hover,
+.day9_container img:nth-child(2):hover {
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+}
+img.travelers_image:hover{
+    transform: none;
+}
+.note,
+.note2,
+.note3 {
+    margin: 5%;
+    color: var(--darkblue);
+    background-color: var(--lightpink); /* Background color of the note */
+    border: 6px solid var(--bluegray40); /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the note */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Shadow effect */
+    position: relative; /* Positioning context for the tape */
+  }
+.note3{
+    color: var(--bluegray40);
+    background-color: white;
+}
+  .note::before,
+  .note::after,
+  .note2::before,
+  .note2::after,
+  .note3::before,
+  .note3::after {
+    content: ""; /* Create pseudo-elements for the tape */
+    position: absolute; /* Position the tape relative to the note */
+    background-color: var(--bluegray40); /* Tape color */
+  }
+  
+  .note::before,
+  .note2::before,
+  .note3::before {
+    width: 5%; /* Width of the left side of the tape */
+    height: 2%; /* Height of the tape */
+    top: 10px; /* Distance from the top of the note */
+    left: -10px; /* Position to the left of the note */
+  }
+  
+  .note::after,
+  .note2::after,
+  .note3::after {
+    width: 5%; /* Width of the right side of the tape */
+    height: 2%; /* Height of the tape */
+    top: 10px; /* Distance from the top of the note */
+    right: -10px; /* Position to the right of the note */
+  }
+  .city_container img:hover{
+    transform: none;
+}
+.an_container{
+    position: absolute;
+    /* z-index: 99; */
+    animation: plane 10s linear 0s infinite reverse;
+}
+@keyframes plane{
+    from {right:-500px;}
+    to{right: 102%;}
+}
+.an_container img{
+    width: 3%;
+    box-shadow: none;
+}
+.title{
+    margin-top: 4%;
+}
+.title h3{
+    color: var(--bluegray40);
+    display: inline;
+    margin-right: 5%;
+    font-size: 110%;
+    background-color: white;
+}
+.color-change{
+    color: var(--darkblue);
+}
+.day1_container,
+.day2_container,
+.day3_container{
+    background-image: url("../images/scrapbook_paper.jpg");
+}
+.day3_container2,
+.day4_container,
+.day5_container,
+.day6_container,
+.day7_container{
+    background-image: url("../images/map_paper.jpg");
+    background-size: cover;
+}
+.day8_container,
+.day9_container,
+.day10_container{
+    background-image: url("../images/clouds.jpg");
+    background-size: cover;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.floating_container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+    margin-top: 5%;
+}
+
+.avatar {
+    margin-top: 5%;
+    width: 50px;
+    height: 50px;
+	box-sizing: border-box;
+	border: 5px var(--bluegray40) solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+.avatar img{
+    border: none;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+	width: 100%;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.fav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#view_description,
+#hotel_description,
+#meal_description,
+#church_description{
+    display: none;
+    background-color: var(--bluegray40);
+    color: white;
+}
+
+@media screen and (min-width: 600px){
+    h3{
+        font-size: 200%;
+    }
+    .avatar{
+        width: 100px;
+        height: 100px;
+    }
+    .overlay-content p{
+        font-size: 70%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    h1 {
+        margin: 0.2em 0 0.2em;
+        font-size: 1000%;
+    }
+    h2{
+        font-size: 400%;
+    }
+    nav li{
+        font-size: 150%;
+    }
+    .city_container{
+        font-size: 120%;
+    }
+    .img_p_container{
+        flex-wrap: nowrap;
+    }
+    .note{
+        transform: rotate(10deg); /* Rotate the right tape */
+      }
+    .note2{
+        transform: rotate(-10deg);
+    }
+    .an_container img{
+        width: 10%;
+    }
+    .title h3{
+        font-size: 300%;
+    }
+    .overlay-content p{
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .avatar{
+        width: 300px;
+        height: 300px;
+    }
 }
