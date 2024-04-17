@@ -10,7 +10,11 @@
     margin-right: 5%;
     margin-left: 5%;
 }
+.travelers_image h3{
+    background-color: var(--lightpink);
+}
 .travelers_image img {
+    margin-top: 20px;
     width: 100%;
     height: 75%;
     object-fit: cover;
@@ -22,9 +26,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition effect */
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
 }
 .overlay-content {
     position: absolute;
@@ -39,11 +43,10 @@
     font-size: 50%;
 }
 .travelers_image:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
 }
 /* end interactive hover */
 
-/* start styling from online example */
 :root {
     --bluegray40: hsl(217, 21%, 40%);
     --darkblue: hsl(217, 97%, 23%);
@@ -64,6 +67,7 @@ body {
     padding: 0;
     background-color: hsl(335, 20%, 99%);
 }
+
 h1 {
     margin: 0.2em 0 0.2em;
     font-size: 400%;
@@ -147,13 +151,13 @@ nav li:hover{
     box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
 }
 p{
-    font-size: 120%;
+    font-size: 80%;
 }
 /* start tilted image effect */
 img{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     position: relative;
     box-shadow: 0px 0px 30px 5px rgba(0,0,0,.7);
     transform: rotate(-2deg); 
@@ -229,6 +233,7 @@ img.plane_jack_auntlisa{
 }
 .img_p_container img{
     width: 40%;
+    margin-top: 20px;
 }
 .day1_container img:nth-child(2),
 .day2_container img:nth-child(2),
@@ -302,7 +307,7 @@ video{
 } 
 /* end first slideshow container */
 button{
-    background-color: var(--midpink);
+    background-color: var(--darkpink);
     color: var(--darkblue);
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -469,7 +474,7 @@ img.travelers_image:hover{
     background-color: var(--lightpink); /* Background color of the note */
     border: 6px solid var(--bluegray40); /* Border color */
     border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the note */
+    padding: 2%; /* Padding inside the note */
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Shadow effect */
     position: relative; /* Positioning context for the tape */
   }
@@ -528,7 +533,7 @@ img.travelers_image:hover{
     color: var(--bluegray40);
     display: inline;
     margin-right: 5%;
-    font-size: 110%;
+    font-size: 80%;
     background-color: white;
 }
 .color-change{
@@ -581,7 +586,6 @@ img.travelers_image:hover{
 }
 
 .avatar {
-    margin-top: 5%;
     width: 50px;
     height: 50px;
 	box-sizing: border-box;
@@ -593,11 +597,12 @@ img.travelers_image:hover{
 	animation: float 6s ease-in-out infinite;
 }
 .avatar img{
+    margin: none;
     border: none;
     transform: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: top;
 }
 
 .content {
@@ -619,6 +624,9 @@ img.travelers_image:hover{
     display: none;
     background-color: var(--bluegray40);
     color: white;
+    border: solid var(--darkpink) 3px;
+    border-radius: 10px;
+    padding: 4px;
 }
 
 @media screen and (min-width: 600px){
@@ -631,6 +639,12 @@ img.travelers_image:hover{
     }
     .overlay-content p{
         font-size: 70%;
+    }
+    p{
+        font-size: 100%;
+    }
+    .title h3{
+        font-size: 110%;
     }
 }
 
@@ -665,6 +679,9 @@ img.travelers_image:hover{
     }
     .overlay-content p{
         font-size: 100%;
+    }
+    p{
+        font-size: 120%;
     }
 }
 
